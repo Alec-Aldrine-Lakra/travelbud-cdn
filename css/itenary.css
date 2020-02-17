@@ -1,0 +1,121 @@
+  .shade-peach {
+    background-color: #F7EFE4 !important;
+  }  
+  
+  .shade-orange{
+    background-color: #F08038 !important;
+  }
+  
+  .shade-blue{
+    background-color: #363F48 !important;
+  }
+  
+  .text-blue{
+    color: #363F48;
+  }
+  
+  .btn:focus {
+    background-color: #F08038;
+  }
+  
+  .shade-brown{
+    background-color: #AF7A6D;
+  }
+  
+  .shade-yellow{
+    background-color: #fee71a;
+  }
+  
+  .btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color:  #F08038 !important;
+    color: black;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+  
+  }
+  
+  #slide-wrapper{
+    height: 85vh;  
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/boats.webp) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+  }
+  
+  div.mySlides > div {
+    position: relative;
+    top: 30vh !important;
+  }
+  
+  .checked{
+    color: #fee71a;
+  }
+  .check{
+    color: #fe9801;
+  }
+  
+  .shade-check{
+    margin-top: 13px;
+    background-color: #fe9801 !important;
+    color: white;
+  }
+  
+  #preloader{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  .invisible{
+    display: none !important;
+  }
+  
+  .nav-link {
+    color: #393A37 !important;
+    text-decoration: none !important;
+  }
+  
+  ul li > a:hover{
+    color:#F08038 !important;
+  }
+  
+  .info{
+    margin-bottom: 25px;
+  }
+
+  .shade-purple {
+    background-color: #3D2B57 !important; 
+  }
+
+  .price{
+    font-weight: 600;
+  }
+
+  .bold{
+    font-weight: 600;
+  }
+
+  .strike-price{
+    color: #a8a8a8;
+  }
+  
+  .discount{
+    display: inline-block;
+    background-color: #F08038;
+    color: white;
+    padding: 0px 3px 0px 3px;
+    border-radius: 2px;
+    position: relative;
+    left: 10px;
+    top: -8px;
+    box-sizing: border-box;
+  }
