@@ -74,3 +74,9 @@ const showSlides = ()=>{
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 3500); // Change image every 5 seconds
 }
+
+const shortMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const dt = document.querySelectorAll('.date');
+for(let i=0; i< d.length; i++){
+    dt[i].innerHTML = shortMonth[new Date(d[i].innerHTML).getMonth()]+" " + new Date(d[i].innerHTML).getDate()+", "+ new Date(d[i].innerHTML).getFullYear()
+}
