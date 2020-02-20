@@ -67,7 +67,7 @@
 
 #slide-wrapper1{
   height: 88vh;  
-  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/pics/victoria.webp) no-repeat;
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/pics/victoria.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
@@ -75,7 +75,7 @@
 }
 #slide-wrapper2{
   height: 88vh;
-  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/pics/museum.webp) no-repeat;
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/pics/museum.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
@@ -84,7 +84,7 @@
 
 #slide-wrapper3{
   height: 88vh;
-  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/pics/bridge.webp) no-repeat;
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/pics/bridge.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;

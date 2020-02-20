@@ -38,7 +38,7 @@
   
   #slide-wrapper{
     height: 85vh;  
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/boats.webp) no-repeat;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/boats.webp) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
