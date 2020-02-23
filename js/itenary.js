@@ -126,7 +126,7 @@ document.getElementById('details').addEventListener('submit',(e)=>{
            break;
        }
    }
-   type = document.getElementsByName('group');
+   const type = document.getElementsByName('group');
    for(let i=0; i<type.length; i++){
         if(type[i].checked){
             g = type[i].value;

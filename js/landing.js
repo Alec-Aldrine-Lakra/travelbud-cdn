@@ -61,8 +61,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 const diyItenary = ()=>{
     setTimeout(()=>{
         $('.modal').modal('open');
-        document.getElementById("modalImage").style.height = `${document.getElementById('modal1').clientHeight}px`;
-    },17000);
+    },16000);
 }
 
 // document.getElementById('newsletter').addEventListener('submit',(e)=>{
