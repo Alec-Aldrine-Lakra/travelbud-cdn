@@ -2,6 +2,10 @@
   height: 350px;
 }
 
+.dactive {
+  background-color: #717171;
+}
+
 .shade-orange{
   background-color: #F08038 !important;
 }
@@ -44,6 +48,10 @@
   #googleMap{ 
     height: 50vh;
   }
+
+  .diy{
+    display: none;
+  }
 }
 .opp{
     filter: blur(2px);
@@ -66,25 +74,23 @@
 }
 
 #slide-wrapper1{
-  height: 88vh;  
-  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/pics/victoria.webp) no-repeat;
+  height: 90vh;  
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn@1.0/images/pics/victoria.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
-  background-position: center center;
+  background-position: center;
 }
 #slide-wrapper2{
-  height: 88vh;
-  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/pics/museum.webp) no-repeat;
+  height: 90vh;
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn@1.0/images/pics/museum.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
-  background-position: center center;
+  background-position: center;
 }
 
 #slide-wrapper3{
-  height: 88vh;
-  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/pics/bridge.webp) no-repeat;
+  height: 90vh;
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn@1.0/images/pics/bridge.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -181,8 +187,42 @@ ul li > a:hover{
   max-height: 400px;
   border-radius: 5px;
 }
+
 .living{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.pad{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.mod-content{
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 30px;
+  padding-bottom: 10px;
 }

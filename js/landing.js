@@ -3,10 +3,10 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.scrollspy').scrollSpy();
-    // $('.modal').modal();
+    $('.modal').modal();
 });
 
-let slideIndex = 0, flag=0;
+let flag=0;
 const metrics = document.getElementById('cinema');
 const xtop = metrics.offsetTop;
 
@@ -47,8 +47,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     setTimeout(()=>{
         document.querySelector('#preloader').classList.add("invisible");
         document.querySelector('header').classList.remove("invisible");
-        showSlides();
-        // newsletter();
+        showSlides(1,true);
+        diyItenary();
     }, 2000);
 
     const shortMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -58,11 +58,12 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
 })
 
-// const newsletter = ()=>{
-//     setTimeout(()=>{
-//         $('.modal').modal('open');
-//     },16000);
-// }
+const diyItenary = ()=>{
+    setTimeout(()=>{
+        $('.modal').modal('open');
+        document.getElementById("modalImage").style.height = `${document.getElementById('modal1').clientHeight}px`;
+    },17000);
+}
 
 // document.getElementById('newsletter').addEventListener('submit',(e)=>{
 //     e.preventDefault();
@@ -70,14 +71,74 @@ window.addEventListener('DOMContentLoaded',()=>{
 //     alert(em);
 //     document.getElementById('subs_email').value="";
 // })
-
-const showSlides = ()=>{
+let slideIndex = 0, t;
+const showSlides = (i, flag)=>{
+    
     const slides = document.getElementsByClassName("mySlides");
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
+    slideIndex+=i;
+    
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    if(slideIndex == 0){
+         slideIndex = 3;
+    }
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 3500); // Change image every 5 seconds
+    if(flag){
+       t = setTimeout(showSlides, 5000, 1, true); // Change image every 5 seconds
+    } else {
+        clearTimeout(t);
+        t = setTimeout(showSlides, 5000, 1, true);
+    }
+}
+
+  
+let pageWidth = window.innerWidth || document.body.clientWidth;
+let treshold = Math.max(1,Math.floor(0.01 * (pageWidth)));
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const limit = Math.tan(45 * 1.5 / 180 * Math.PI);
+const gestureZone = document.getElementById('swipe');
+
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture(event);
+}, false);
+
+function handleGesture(e) {
+    let x = touchendX - touchstartX;
+    let y = touchendY - touchstartY;
+    let xy = Math.abs(x / y);
+    let yx = Math.abs(y / x);
+    if (Math.abs(x) > treshold || Math.abs(y) > treshold) {
+        if (yx <= limit) {
+            if (x < 0) {
+                showSlides(-1, false);
+            } else {
+                showSlides(1, false);
+                // console.log("right");
+            }
+        }
+        if (xy <= limit) {
+            if (y < 0) {
+                // console.log("top");
+            } else {
+                // console.log("bottom");
+            }
+        }
+    } else {
+        // console.log("tap");
+    }
 }
