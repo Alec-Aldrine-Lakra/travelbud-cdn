@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.scrollspy').scrollSpy();
     $('.collapsible').collapsible();
     $('select').formSelect();
+    $('.tooltipped').tooltip();
 });
 
 window.addEventListener('DOMContentLoaded',()=>{
