@@ -136,6 +136,7 @@ document.getElementById('details').addEventListener('submit',(e)=>{
     }
 
     if(name!="" && email!="" && checkin!="" && checkout!="" && nationality!="" && nop!="" && phone!="" && a!="" && g!="") {
+        showLoader();
         const body = {
             'email': email,
             'name': name,
@@ -163,15 +164,27 @@ document.getElementById('details').addEventListener('submit',(e)=>{
                 return res.json();
             }
         }).then(res =>{
+            stopLoader();
             if(res.message){
                 M.toast({html: 'Message Sent Successfully, We will get back to you in no time &#128516;'});
             } else {
                 M.toast({html: 'Please fill all the fields &#128534; and try after some time'});    
             }
         }).catch(err=>{
+            stopLoader();
             M.toast({html: 'Server error, please try after some time &#128534;'});
         })
     } else {
         M.toast({html: 'Please Fill all the fields &#128530;'});
     }
 })
+
+function showLoader(){
+    document.getElementById("subButton").disabled = true;
+    document.getElementById("pageloader").style.display="block";
+}
+
+function stopLoader(){
+    document.getElementById("pageloader").style.display = "none";
+    document.getElementById("subButton").disabled = false;
+}

@@ -26,6 +26,7 @@ document.getElementById('details').addEventListener('submit',(e)=>{
     const content =  document.getElementById('content').value.trim();
 
     if(em!=='' && name!=='' && content!==''){
+        showLoader();
         const body = {
             'email': em,
             'name': name,
@@ -46,12 +47,14 @@ document.getElementById('details').addEventListener('submit',(e)=>{
                 return res.json();
             }
         }).then(res =>{
+            stopLoader();
             if(res.message=="Inserted"){
                 M.toast({html: 'Message Sent Successfully, We will get back to you in no time &#128516;'});
             } else {
                  M.toast({html: 'Please fill all the fields &#128534; and try after some time'});  
             }
         }).catch(err=>{
+            stopLoader();
             M.toast({html: 'Server error, please try after some time &#128534;'});
         })
     } else {
@@ -65,4 +68,15 @@ function myMap() {
         zoom:12,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+function showLoader(){
+    document.getElementById("subButton").disabled = true;
+    document.getElementById("pageloader").style.display="block";
+}
+
+function stopLoader(){
+    document.getElementById("pageloader").style.display = "none";
+    document.getElementById("subButton").disabled = false;
+    document.getElementsByTagName('form')[0].reset();
 }
