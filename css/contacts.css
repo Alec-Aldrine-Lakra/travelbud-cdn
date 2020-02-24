@@ -44,7 +44,10 @@
   background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn/images/grayscale.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 div.mySlides > div {

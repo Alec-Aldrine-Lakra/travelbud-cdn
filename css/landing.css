@@ -42,11 +42,18 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .parallax-container{
-    height: 540px;
+    height: 550px;
   }
 
   #googleMap{ 
     height: 50vh;
+  }
+
+  .mod-content{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 10px;
   }
 
   .diy{
@@ -61,11 +68,22 @@
 @media only screen and (max-width: 400px) {
   /* For mobile phones: */
   .parallax-container{
-    height: 580px;
+    height: 600px;
   }
 
   #googleMap{ 
     height: 50vh;
+  }
+
+  .diy{
+    display: none;
+  }
+
+  .mod-content{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 10px;
   }
 }
 .opp{
@@ -79,6 +97,9 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 #slide-wrapper2{
   height: 90vh;
@@ -86,6 +107,9 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 #slide-wrapper3{
@@ -93,7 +117,10 @@
   background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.jsdelivr.net/gh/Alec-Aldrine-Lakra/travelbud-cdn@1.0/images/pics/bridge.webp) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 
@@ -221,8 +248,9 @@ ul li > a:hover{
 }
 
 .mod-content{
-  padding-top: 30px;
-  padding-left: 0px;
-  padding-right: 30px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 20px;
   padding-bottom: 10px;
 }
+
