@@ -85,15 +85,15 @@ function handleRadio(ob){
     }
 }
 
-document.querySelector(".number").addEventListener("keypress", function (e) {
-    e.stopPropagation();
+document.querySelector(".number").addEventListener("keypress", function (evt) {
+    evt.stopPropagation();
     let a = document.querySelector(".number").value;
     if (a>10 || evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
         e.preventDefault();
 });
 
-document.querySelector("#phone").addEventListener("keypress", function (e) {
-    e.stopPropagation();
+document.querySelector("#phone").addEventListener("keypress", function (evt) {
+    evt.stopPropagation();
     let a = document.querySelector("#phone").value;
     if (a>1000000000 || evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
         e.preventDefault();
